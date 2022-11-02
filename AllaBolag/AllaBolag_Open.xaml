@@ -1,0 +1,157 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Alla_Bolag_Open" this:Alla_Bolag_Open.in_URL="https://www.allabolag.se/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_URL" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1227.33333333333,1240</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Alla_Bolag_Open_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Alla_Bolag_Open" sap:VirtualizedContainerService.HintSize="1034,1175.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Workflow opens website &quot;allabolag.se&quot; in Google Chrome-browser." DisplayName="AllaBolag_Open" sap:VirtualizedContainerService.HintSize="992,1085.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="930,104.666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Attempting to open &quot; + in_URL + &quot; in Chrome-browser.&quot;]" />
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome - Alla Bolag " sap:VirtualizedContainerService.HintSize="930,788" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="ec271bbc-88c4-4e6e-b091-103feceb1042" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="896,560" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="Nyckeltal" />
+                <Variable x:TypeArguments="x:String" Name="Omsättning" />
+                <Variable x:TypeArguments="x:String" Name="ResultatDraft" />
+                <Variable x:TypeArguments="x:String" Name="ResultatFinal" />
+                <Variable x:TypeArguments="x:String" Name="AntalAnställda" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State - Alla Bolag logo is available" sap:VirtualizedContainerService.HintSize="854,467.333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="ec271bbc-88c4-4e6e-b091-103feceb1042" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,197.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,104.666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Successfully opened website.&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,124.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw DisplayName="Throw - SE " Exception="[new ApplicationException(&quot;Failed to verify that website is open.&quot;)]" sap:VirtualizedContainerService.HintSize="358,32" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.allabolag.se/" DesignTimeRectangle="11, 263, 228, 36" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='app' src='https://www.allabolag.se/Assets/img/enento/ALLABOLAG_neg.svg' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' src='https://www.allabolag.se/Assets/img/enento/ALLABOLAG_neg.svg' tag='IMG' type='' class='tw-px-4 tw-hidden tablet:tw-inline tw-h-6' aaname='Allabolag.se' /&gt;" Guid="19a9f2af-958e-42c1-9361-734efce54276" ImageBase64="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" InformativeScreenshot="bf16ba21e2e5c6cc9f06bdec81563dd5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGtSURBVDhPlVPPKwVRGB2/Kf4DRKGQhd7qmXtvQ1KsKZaIjWIhZfkWyt9ASfHum9fsnnjmzpOxekkWVg9li2ytiOf5vjvf+6VRnDo153znzL1zb2P8hOMMNkplLiYUOwLearo8ZSu2sHMdaaBYOJJnrA8Kd8DCL8xJT/RSvBpOhnVC4JmCb7DijlR8Fgl6F/hOs6d42mqnWhkwOKXAY8I1B8kuIZ4RQ1gOMvyE7ABYoHIh6Y1MoLeXMtsSLluHnaw6vtWKnvTMqVIuI/rR05AeW9MDl92jjsWMWunxq2IYeIkezuD5AT3bYyuoNcDY1kE4bdQHSnRrXUH71OrSWY8dk7eFWgPEZmDyLOp932oG/UJB5HM6PdmEs/LO+AZqDemaoxT8xNW1p1gENB7skZ0Rw+gdutEe0HnMSiUEehqOM1MHZvH+z3EHNCrByUZbYHZBmRx2aBRAumwcBp8UuLEVn8bvRsJ3z4GnDy/IiDGqVQNuYR4CbxQMY952+RLFwxFP8wEI2sDXiuLfypXwfaveVqKDyl//KhdRKBg1UP7A/4Gs/wFfANe5TDIEhvENEelLyyUs0isAAAAASUVORK5CYII=" InformativeScreenshot="048977270ae6721f1c3f1bd8514daa15.png" Selector="&lt;html app='chrome.exe' url='https://www.allabolag.se/*' /&gt;" Url="[in_URL]" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

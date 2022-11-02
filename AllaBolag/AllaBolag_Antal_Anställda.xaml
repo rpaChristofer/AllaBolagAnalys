@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Alla_Bolag_Antal_Anställda" this:Alla_Bolag_Antal_Anställda.in_URL="https://www.allabolag.se/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_URL" Type="InArgument(x:String)" />
+    <x:Property Name="out_AntalAnställda" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1227.33333333333,1626</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Alla_Bolag_Antal_Anställda_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Alla_Bolag_Antal_Anställda" sap:VirtualizedContainerService.HintSize="580,1561.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="AntalAnställda" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Workflow retrieves the number of employees for company in current transaction and passes it as an output argument. " DisplayName="AllaBolag_Antal_Anställda" sap:VirtualizedContainerService.HintSize="538,1471.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="476,104.666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Attempting to find 'Antal anställda' - value for previous year.&quot;]" />
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: allabolag.se - Företagsinformation om alla Sveriges bolag" sap:VirtualizedContainerService.HintSize="476,1159.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="ec271bbc-88c4-4e6e-b091-103feceb1042" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="442,931.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Get 'Antal anställda'" sap:VirtualizedContainerService.HintSize="400,838.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="338,249.333333333333" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="40" Version="V1">
+                  <uix:NMouseScroll.SearchedElement>
+                    <uix:SearchedElement>
+                      <uix:SearchedElement.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.allabolag.se/5569058810/bokslut" DesignTimeRectangle="355, 432, 492, 28" ElementType="Text" FriendlyName="'Nyckeltal'" FullSelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname=' Nyckeltal                                                                                    ' check:innerText='Nyckeltal' /&gt;" Guid="d85a9b62-a69b-4aff-8bf0-348adc86a7ff" ImageBase64="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" InformativeScreenshot="3dba3197944bfc70b96cb4ea2222a984.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Boa Plåtslagare AB - Bokslut &amp;amp; Nyckeltal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="355, 480, 123, 22" ElementType="Text" FriendlyName="'Antal anställda'" FullSelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl aaname='Antal anställda' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl aaname='Antal anställda' type='' tag='SPAN' class='' check:innerText='Antal anställda' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHcAAAAaCAYAAACNU8MOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAU7SURBVGhD7Zh/SF1lGMcHUUQUBQVFEEFFRD+I+iOCUUFFRP8EBf36o9Z+tdVWq7XmWpTabtqW23TqtqY4dc2s5rS2NkvMCF1DS+dVZ+q4Xr3O5aBaK6Kins7nHc/t3Ot73fEMhhzOH1+O53mf8zzv837f58d1lhwfkxDBREhugBGSG2CE5AYYIbkBRkhugBGSe4Y4MRqTnJ2fGYwMDiT/Rm7TP5uwkvvvxJis2F4ns+ZkS/5Hn09anw52NH4tL5V9ItFo1LqeCV3dUbns+Xx5KL9cfhuLW3XOJpra2k0cPN3yY7EhueG1jQaHnD3r38hZt8Xh/kb1MqFwd6PhgadtfSpYyY0N9Mu1ywuM0VtXFUliaHCSjlcs2lpr7OxvPWhdz4SZRq7fQ55x5JKt589/W+aW1Mg5c3OkbG/zJB2vCMmdQeSSpWTrvWvel8H+w3L76mK5480SOR4/kqKnTiO1e2RVVb1csGCNnDsvR+aV1sjPI7FkUOi4AdmU/bb2TnmkoFIuXhQx8itfXCslDV/KX8cSxr4Xcqdj58G8cqlubJGrX37P6BFX56HupK3fj8bl9aqGFDvZTu8c6u83JCBzg32dTMR9xZGJXM5tWfkuc5Zg4ZZa07+xq+T+mhiWvNq9cuPKQpN4nDmxsU+1o5hELlmKMc1Wshgjdc2tKXpKLpt4IK/M9KPbVm8ysjeqG8xwkeWQflNWoZE9vK7C6NCDCfzZ4p1Gf8m2j42cC4Sfin1fGfteyJ2OnfPm55oDQe9Rhwx07nyrVH6Kx5IzBjKN5YmN1XLF0rXScrDDHPBdOVtMHDxZ31T/hZwcG/EVh43cP8ZH5PENVcYHNrDFXjhfZErugY5OuWrZOnnS2R86zxR/YC6WLQFTyGURpetXbJD4wA9Gdri319xGMtk9ASq53Fo2huzb77rkouciKYFkKst/jo+aQ9V3sujSF/JkweYPjdwLucCrHWIgFnR+GR2Wu3O3Gjnr2McPcR898n8mEa9moMarh6zwE4eN3PbOLrlk8TumokwMnyIJ33Ocy+P2+89EIrkngA984dNdiUAKuWQnt45brBv++8dRU2rpwc0HOpK6tmBtgdjIxTbljJup5Uyh33oh168dnrwrucgopcR+i1NpXq2ok4aWNpPV6ssWr1//NnI5H77jvNQ+2L6vJcUvZZl2cd3y9Wa/bp/pCZQkl1tKdrqV0+HO0jMhV6sBJYfyR3l5qnCHuUBTHUo6/NrhybubXIiibxU55ZaSB1msU41Yt8Xr179fctmj/kTlEmor0NaXkVyykk3RP/jADYxc88p6Uzao+eh7JXep8y167olbA9HShUz967c90R65fMm7KWUqHV7seCWXgUptgNaO7+XChREzvPBe+mmT8eWuan7j4HlzVlFKq9B9TlWWdd/uEkyykXToWMlVBTblLr1uaMmmRFOqvZKr35EJNP+Vlbulv6/P9DeVATaMnn6rlQTZ7OzNUrBrvyFAfQHmgtPZ8UIuvu6PbEsZjPgbOzpIak9kOn3MGXwWOxnW2d3tK44TiZg5R86PDORMxp1erwOVJhjlXqd7PWcGXN516GIoZFhEZiWXiZDS4j6AdNB/7nENIV7J5fbRz7il6BMggxuZoZMlt7XSKT/p36LDGt897Rwcl0p9KU5nxwu5DCn1To/FDuThj55GtdHhhcxEBznrkNrX0+s7DlrAfZFTpDPcMeTZfgrVNn1jvtNzdv9kQye3Zo/5fwQ6VnJDBBMhuQFGSG6AEZIbYITkBhghuQFGSG6AEZIbWIzJf/hVgbgtW1MeAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:SearchedElement.Target>
+                      <uix:SearchedElement.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:SearchedElement.Timeout>
+                    </uix:SearchedElement>
+                  </uix:NMouseScroll.SearchedElement>
+                </uix:NMouseScroll>
+                <uix:NGetText DisplayName="Get Text 'Antal anställda'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="ec271bbc-88c4-4e6e-b091-103feceb1042" Version="V1">
+                  <uix:NGetText.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www.allabolag.se/5569687477/bokslut" DesignTimeRectangle="857, 328, 87, 38" ElementType="Text" FriendlyName="'2'" FullSelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='number--positive data-pager__page data-pager__page--0' /&gt;" Guid="a8e3bb9f-bae8-4914-bc6f-e5ec8fa7827f" ImageBase64="" InformativeScreenshot="249530ba2062f9dbf2a82abe4784eff3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='* - Bokslut &amp;amp; Nyckeltal' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="355, 336, 115, 22" ElementType="Text" FriendlyName="'Antal anställda'" FullSelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl aaname='Antal anställda' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Nyckeltal  Antal anställda                     Det totala antale*' parentid='bokslut' tag='TABLE' /&gt;&lt;webctrl aaname='Antal anställda' type='' tag='SPAN' class='' check:innerText='Antal anställda' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHcAAAAaCAYAAACNU8MOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAU7SURBVGhD7Zh/SF1lGMcHUUQUBQVFEEFFRD+I+iOCUUFFRP8EBf36o9Z+tdVWq7XmWpTabtqW23TqtqY4dc2s5rS2NkvMCF1DS+dVZ+q4Xr3O5aBaK6Kins7nHc/t3Ot73fEMhhzOH1+O53mf8zzv837f58d1lhwfkxDBREhugBGSG2CE5AYYIbkBRkhugBGSe4Y4MRqTnJ2fGYwMDiT/Rm7TP5uwkvvvxJis2F4ns+ZkS/5Hn09anw52NH4tL5V9ItFo1LqeCV3dUbns+Xx5KL9cfhuLW3XOJpra2k0cPN3yY7EhueG1jQaHnD3r38hZt8Xh/kb1MqFwd6PhgadtfSpYyY0N9Mu1ywuM0VtXFUliaHCSjlcs2lpr7OxvPWhdz4SZRq7fQ55x5JKt589/W+aW1Mg5c3OkbG/zJB2vCMmdQeSSpWTrvWvel8H+w3L76mK5480SOR4/kqKnTiO1e2RVVb1csGCNnDsvR+aV1sjPI7FkUOi4AdmU/bb2TnmkoFIuXhQx8itfXCslDV/KX8cSxr4Xcqdj58G8cqlubJGrX37P6BFX56HupK3fj8bl9aqGFDvZTu8c6u83JCBzg32dTMR9xZGJXM5tWfkuc5Zg4ZZa07+xq+T+mhiWvNq9cuPKQpN4nDmxsU+1o5hELlmKMc1Wshgjdc2tKXpKLpt4IK/M9KPbVm8ysjeqG8xwkeWQflNWoZE9vK7C6NCDCfzZ4p1Gf8m2j42cC4Sfin1fGfteyJ2OnfPm55oDQe9Rhwx07nyrVH6Kx5IzBjKN5YmN1XLF0rXScrDDHPBdOVtMHDxZ31T/hZwcG/EVh43cP8ZH5PENVcYHNrDFXjhfZErugY5OuWrZOnnS2R86zxR/YC6WLQFTyGURpetXbJD4wA9Gdri319xGMtk9ASq53Fo2huzb77rkouciKYFkKst/jo+aQ9V3sujSF/JkweYPjdwLucCrHWIgFnR+GR2Wu3O3Gjnr2McPcR898n8mEa9moMarh6zwE4eN3PbOLrlk8TumokwMnyIJ33Ocy+P2+89EIrkngA984dNdiUAKuWQnt45brBv++8dRU2rpwc0HOpK6tmBtgdjIxTbljJup5Uyh33oh168dnrwrucgopcR+i1NpXq2ok4aWNpPV6ssWr1//NnI5H77jvNQ+2L6vJcUvZZl2cd3y9Wa/bp/pCZQkl1tKdrqV0+HO0jMhV6sBJYfyR3l5qnCHuUBTHUo6/NrhybubXIiibxU55ZaSB1msU41Yt8Xr179fctmj/kTlEmor0NaXkVyykk3RP/jADYxc88p6Uzao+eh7JXep8y167olbA9HShUz967c90R65fMm7KWUqHV7seCWXgUptgNaO7+XChREzvPBe+mmT8eWuan7j4HlzVlFKq9B9TlWWdd/uEkyykXToWMlVBTblLr1uaMmmRFOqvZKr35EJNP+Vlbulv6/P9DeVATaMnn6rlQTZ7OzNUrBrvyFAfQHmgtPZ8UIuvu6PbEsZjPgbOzpIak9kOn3MGXwWOxnW2d3tK44TiZg5R86PDORMxp1erwOVJhjlXqd7PWcGXN516GIoZFhEZiWXiZDS4j6AdNB/7nENIV7J5fbRz7il6BMggxuZoZMlt7XSKT/p36LDGt897Rwcl0p9KU5nxwu5DCn1To/FDuThj55GtdHhhcxEBznrkNrX0+s7DlrAfZFTpDPcMeTZfgrVNn1jvtNzdv9kQye3Zo/5fwQ6VnJDBBMhuQFGSG6AEZIbYITkBhghuQFGSG6AEZIbWIzJf/hVgbgtW1MeAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NGetText.Target>
+                  <uix:NGetText.Text>
+                    <OutArgument x:TypeArguments="x:String">[AntalAnställda]</OutArgument>
+                  </uix:NGetText.Text>
+                </uix:NGetText>
+                <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[out_AntalAnställda]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[AntalAnställda.Trim]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,104.666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Antal anställda: &quot; + out_AntalAnställda]" />
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGtSURBVDhPlVPPKwVRGB2/Kf4DRKGQhd7qmXtvQ1KsKZaIjWIhZfkWyt9ASfHum9fsnnjmzpOxekkWVg9li2ytiOf5vjvf+6VRnDo153znzL1zb2P8hOMMNkplLiYUOwLearo8ZSu2sHMdaaBYOJJnrA8Kd8DCL8xJT/RSvBpOhnVC4JmCb7DijlR8Fgl6F/hOs6d42mqnWhkwOKXAY8I1B8kuIZ4RQ1gOMvyE7ABYoHIh6Y1MoLeXMtsSLluHnaw6vtWKnvTMqVIuI/rR05AeW9MDl92jjsWMWunxq2IYeIkezuD5AT3bYyuoNcDY1kE4bdQHSnRrXUH71OrSWY8dk7eFWgPEZmDyLOp932oG/UJB5HM6PdmEs/LO+AZqDemaoxT8xNW1p1gENB7skZ0Rw+gdutEe0HnMSiUEehqOM1MHZvH+z3EHNCrByUZbYHZBmRx2aBRAumwcBp8UuLEVn8bvRsJ3z4GnDy/IiDGqVQNuYR4CbxQMY952+RLFwxFP8wEI2sDXiuLfypXwfaveVqKDyl//KhdRKBg1UP7A/4Gs/wFfANe5TDIEhvENEelLyyUs0isAAAAASUVORK5CYII=" InformativeScreenshot="048977270ae6721f1c3f1bd8514daa15.png" Selector="&lt;html app='chrome.exe' url='https://www.allabolag.se/*' /&gt;" Url="[in_URL]" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
